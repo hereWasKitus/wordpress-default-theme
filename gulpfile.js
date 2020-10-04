@@ -23,7 +23,7 @@ function scss() {
 function js() {
   return src('assets/js/modules/*.js')
     .pipe(concat('index.js'))
-    ,pipe(minify())
+    .pipe(minify())
     .pipe(dest('assets/js/'))
     .pipe(browserSync.stream());
 }
