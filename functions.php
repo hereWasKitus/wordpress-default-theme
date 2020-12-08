@@ -31,6 +31,8 @@ if ( ! function_exists( 'coelix_setup' ) ) :
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
+		
+		add_theme_support( 'woocommerce' );
 
 		/*
 		 * Let WordPress manage the document title.
