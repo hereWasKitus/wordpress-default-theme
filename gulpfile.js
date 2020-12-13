@@ -35,7 +35,8 @@ function js () {
             exclude: /(node_modules)/,
             loader: 'babel-loader',
             query: {
-              presets: ['@babel/env']
+              presets: ['@babel/env'],
+              plugins: ['@babel/transform-runtime']
             }
           }
         ]
