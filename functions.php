@@ -151,6 +151,12 @@ function coelix_scripts() {
 	// wp_enqueue_script( 'coelix-fullpage', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js', array(), '20151215', true );
 	// wp_enqueue_script( 'coelix-slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array(), '20151215', true );
 	// wp_enqueue_script( 'coelix-wow', 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js', array(), '20151215', true );
+	
+	if ( !is_admin() ) {
+	  wp_deregister_script( 'jquery' );
+	  wp_register_script( 'jquery', ( 'https://code.jquery.com/jquery-3.5.1.min.js' ), false, null, true );
+	  wp_enqueue_script( 'jquery' );
+	}
 
 	wp_enqueue_style( 'coelix-main-style', get_template_directory_uri() . '/dist/main.css' );
 	wp_enqueue_script( 'coelix-main-script', get_template_directory_uri() . '/dist/app.min.js', array(), false, true );
