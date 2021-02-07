@@ -36,6 +36,16 @@ function js () {
             loader: 'babel-loader',
             query: {
               presets: ['@babel/env'],
+//               presets: [
+//                 [
+//                   '@babel/env',
+//                   {
+//                     "targets": {
+//                       "esmodules": true
+//                     }
+//                   }
+//                 ]
+//               ],
               plugins: ['@babel/transform-runtime']
             }
           }
